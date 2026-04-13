@@ -1,0 +1,76 @@
+:root {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #4c566b;
+  background:
+    radial-gradient(circle at top, rgba(255, 214, 196, 0.55), transparent 28%),
+    linear-gradient(180deg, #f7f1e8 0%, #f4efe7 42%, #f6f7fb 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --font-heading: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --heading-color: #162033;
+  --muted-color: #556070;
+  --accent-color: #c55a3f;
+  --card-bg: rgba(255, 250, 244, 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#root {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+main {
+  padding-bottom: 4rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--heading-color);
+  letter-spacing: -0.04em;
+}
+
+p,
+li {
+  color: var(--muted-color);
+}
+
+::selection {
+  background: rgba(201, 100, 71, 0.18);
+}
+
+@media (max-width: 720px) {
+  #root {
+    width: min(100% - 1.1rem, 1180px);
+  }
+}
