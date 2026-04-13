@@ -549,13 +549,13 @@
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(46px) scale(0.972);
+  opacity: 0.2;
+  transform: translateY(24px) scale(0.988);
   transition:
-    opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 900ms cubic-bezier(0.16, 1, 0.3, 1),
-    filter 900ms cubic-bezier(0.16, 1, 0.3, 1);
-  filter: blur(6px);
+    opacity 520ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 520ms cubic-bezier(0.16, 1, 0.3, 1);
+  filter: blur(2px);
 }
 
 .reveal.is-visible {
