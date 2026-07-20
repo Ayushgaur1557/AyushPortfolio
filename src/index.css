@@ -1,7 +1,10 @@
 :root {
   font-family: 'Manrope', sans-serif;
-  color: #a9b4c5;
-  background: #090d14;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--muted);
+  background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,6 +16,18 @@
   --muted: #9aa7b8;
   --accent: #65f5b5;
   --accent-dark: #071d16;
+  transition: background-color .25s ease, color .25s ease;
+}
+
+:root[data-theme='light'] {
+  --bg: #f4f6f2;
+  --surface: #ffffff;
+  --surface-light: #e9eee9;
+  --line: rgba(20, 38, 32, 0.13);
+  --text: #13221d;
+  --muted: #596a64;
+  --accent: #087a55;
+  --accent-dark: #e1f3eb;
 }
 
 html { scroll-behavior: smooth; }
@@ -21,6 +36,6 @@ body { margin: 0; min-width: 320px; overflow-x: hidden; }
 a, button { -webkit-tap-highlight-color: transparent; }
 button { font: inherit; }
 #root { width: 100%; min-height: 100vh; }
-h1, h2, h3 { margin: 0; font-family: 'Space Grotesk', sans-serif; color: var(--text); letter-spacing: -0.045em; }
+h1, h2, h3 { margin: 0; font-family: 'Space Grotesk', sans-serif; color: var(--text); font-weight: 600; letter-spacing: -0.035em; }
 p { margin: 0; }
 ::selection { color: #07110d; background: var(--accent); }

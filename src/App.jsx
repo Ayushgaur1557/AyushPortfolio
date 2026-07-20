@@ -139,6 +139,21 @@ const achievements = [
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = window.localStorage.getItem('portfolio-theme')
+    if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+  })
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    document.documentElement.style.colorScheme = theme
+    window.localStorage.setItem('portfolio-theme', theme)
+    document.querySelector('meta[name="theme-color"]')?.setAttribute(
+      'content',
+      theme === 'light' ? '#f4f6f2' : '#090d14',
+    )
+  }, [theme])
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 24)
@@ -170,11 +185,20 @@ function App() {
           <span className="brand-mark">AG</span>
           <span>Ayush Gaur</span>
         </a>
-        <button className="menu-button" type="button" aria-expanded={menuOpen} aria-controls="site-nav" onClick={() => setMenuOpen((open) => !open)}>
-          <span className="sr-only">Toggle navigation</span>
-          <span /><span /><span />
-        </button>
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`} id="site-nav">
+          <button
+            className="theme-button nav-theme-button"
+            type="button"
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+            title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+            onClick={() => setTheme((currentTheme) => currentTheme === 'dark' ? 'light' : 'dark')}
+          >
+            {theme === 'dark' ? (
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41" /></svg>
+            ) : (
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.5A9 9 0 0 1 8.5 3.6 9 9 0 1 0 20.4 15.5Z" /></svg>
+            )}
+          </button>
           <a href="#about" onClick={closeMenu}>About</a>
           <a href="#experience" onClick={closeMenu}>Experience</a>
           <a href="#work" onClick={closeMenu}>Live work</a>
@@ -182,6 +206,12 @@ function App() {
           <a href="#skills" onClick={closeMenu}>Skills</a>
           <a className="nav-cta" href="#contact" onClick={closeMenu}>Contact</a>
         </nav>
+        <div className="topbar-actions">
+          <button className="menu-button" type="button" aria-expanded={menuOpen} aria-controls="site-nav" onClick={() => setMenuOpen((open) => !open)}>
+            <span className="sr-only">Toggle navigation</span>
+            <span /><span /><span />
+          </button>
+        </div>
       </header>
 
       <main>
