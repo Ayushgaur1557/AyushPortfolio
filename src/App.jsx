@@ -8,431 +8,241 @@ const socialLinks = [
 ]
 
 const metrics = [
-  { value: '3', label: 'Live apps in production' },
-  { value: '2', label: 'Stores managed: Play Store and App Store' },
+  { value: '5', label: 'Live products shipped' },
+  { value: '3', label: 'Store accounts managed' },
+  { value: '300+', label: 'Coding problems solved' },
 ]
 
 const liveProducts = [
   {
+    title: 'Stapples',
+    type: 'Self-service printing kiosk',
+    description: 'An unattended tablet kiosk for sending documents from a phone, previewing print settings, and printing directly to network printers.',
+    highlights: ['Custom IPP engine', 'QR & one-time pairing', 'Printer discovery'],
+    href: 'https://play.google.com/store/apps/details?id=com.kiosk_user&hl=gu',
+  },
+  {
     title: 'MettsCredit',
-    description:
-      'Live fintech product where I contribute features, UI improvements, bug fixes, API integration, and production polish.',
-    href: 'https://play.google.com/store/search?q=mettsCredit&c=apps&hl=gu',
-    linkLabel: 'View on Play Store',
+    type: 'Property management platform',
+    description: 'A large-scale owner platform for managing properties, tenants, IoT meters, billing, wallets, reports, and payments across 100+ screens.',
+    highlights: ['IoT smart meters', 'Billing & wallets', 'Razorpay'],
+    href: 'https://play.google.com/store/search?q=MettsCredit&c=apps',
   },
   {
     title: 'MettsPe',
-    description:
-      'Production mobile app I help maintain and scale with cross-platform React Native development for Android and iOS.',
-    href: 'https://play.google.com/store/search?q=mettsPe&c=apps&hl=gu',
-    linkLabel: 'View on Play Store',
+    type: 'Production fintech product',
+    description: 'Contributed features, API integrations, UI improvements, production fixes, performance work, and cross-platform release support.',
+    highlights: ['Production support', 'API integrations', 'Android & iOS'],
+    href: 'https://play.google.com/store/search?q=MettsPe&c=apps',
   },
   {
     title: 'AEEROx LMS',
-    description:
-      'Current LMS product work involving feature delivery, API integration, clean UI implementation, and release support.',
-    href: 'https://play.google.com/store/apps/details?id=com.aeero.learner.android&hl=gu',
-    linkLabel: 'Open App Listing',
+    type: 'Learning management system',
+    description: 'Delivered product features, responsive interfaces, API-connected workflows, defect fixes, and release-ready improvements for a live LMS.',
+    highlights: ['Feature delivery', 'Scalable UI', 'Release support'],
+    href: 'https://play.google.com/store/apps/details?id=com.aeero.learner.android&hl=en',
+  },
+  {
+    title: 'VadapavMirchi',
+    type: 'Food ordering application',
+    description: 'Worked on a customer-facing production application, supporting reliable app experiences and live-store delivery.',
+    highlights: ['Live product', 'Store delivery', 'Customer experience'],
+    href: 'https://play.google.com/store/apps/details?id=com.purevegrn.android&hl=en',
   },
 ]
 
 const experiences = [
   {
-    role: 'React Native Developer',
+    role: 'Frontend Developer',
     company: 'Srchout Software Pvt. Ltd.',
-    period: 'Nov 2025 - Present',
+    period: 'Jul 2025 — Present',
     points: [
-      'Joined full-time after successfully completing a 4-month internship and now contribute to production-grade mobile products.',
-      'Working on Mettsenia Phase 2 (V2) and supporting live app delivery for MettsPe, MettsCredit, and AEEROx LMS.',
-      'Build features, improve UI/UX, integrate APIs, fix bugs, and optimize performance in React Native apps.',
-      'Handle cross-platform delivery for Android and iOS, including push notifications, Firebase integration, and release workflows.',
-      'Support App Store and Google Play Store publishing processes, signed builds, validation, and live app updates.',
+      'Build and maintain production software across frontend, cross-platform, API, and native Android layers.',
+      'Ship features for MettsCredit, MettsPe, AEEROx LMS, Stapples, and VadapavMirchi, from reusable UI and state architecture through testing and release.',
+      'Integrate REST APIs, Socket.IO, Firebase, push notifications, payments, native device capabilities, and backend services.',
+      'Support Android and iOS release pipelines and manage production publishing across three store accounts.',
+      'Collaborate on debugging, performance, UX quality, and reliable delivery for real users.',
     ],
   },
   {
-    role: 'React Native Intern',
+    role: 'Frontend Engineering Intern',
     company: 'Srchout Software Pvt. Ltd.',
-    period: 'Jul 2025 - Oct 2025',
+    period: 'Mar 2025 — Jun 2025',
     points: [
-      'Contributed to live mobile products by building screens, reusable components, and API-connected features.',
-      'Worked on debugging, testing, and improving usability and app performance for Android and iOS.',
-      'Learned production workflows, team collaboration, and release readiness in a real delivery environment.',
+      'Built reusable interfaces and API-connected product flows while learning production engineering practices.',
+      'Contributed to debugging, testing, usability improvements, and Android/iOS release readiness.',
     ],
   },
 ]
 
 const projects = [
   {
+    title: 'Stapples',
+    subtitle: 'Kiosk software · React Native, TypeScript, Kotlin, Java, Node.js',
+    description: 'Built a self-service document-printing kiosk with an end-to-end workflow from phone upload to unattended network printing.',
+    bullets: [
+      'Wrote a native IPP printing engine from scratch for document conversion, capability discovery, streaming, submission, and live job-status polling.',
+      'Added zero-configuration mDNS/Zeroconf printer discovery and native print previews with A4/A3, orientation, and color controls.',
+      'Built Socket.IO document delivery using secure QR and one-time kiosk codes, plus device registration and token-based authentication.',
+      'Contributed Node.js/Express endpoints for kiosk profiles, pending documents, print-status updates, and real-time server pairing.',
+    ],
+    links: [{ label: 'View live app', href: 'https://play.google.com/store/apps/details?id=com.kiosk_user&hl=en' }],
+  },
+  {
+    title: 'MettsCredit · Owner Panel',
+    subtitle: 'Property management · React Native, TypeScript, Firebase, Socket.IO',
+    description: 'Engineered a production property-management platform spanning rental operations, IoT energy data, payments, and reporting.',
+    bullets: [
+      'Developed workflows across 100+ screens with Redux Toolkit and a modular 40+ service Axios API layer.',
+      'Implemented real-time smart-meter monitoring, energy logs, recharge flows, device health, and anomaly visibility.',
+      'Built prepaid/postpaid billing, rates, dues, collections, payouts, settlements, Razorpay payments, and offline approval flows.',
+      'Delivered KYC and onboarding, signature capture, OTP, dashboards, PDF/XLSX exports, notifications, support chat, and responsive UI components.',
+    ],
+    links: [{ label: 'View product listing', href: 'https://play.google.com/store/search?q=MettsCredit&c=apps' }],
+  },
+  {
     title: 'UpGrowLearn',
     subtitle: 'Full-stack e-learning platform',
-    description:
-      'Built a full-stack learning product with role-based modules for admin, instructor, and learner flows.',
+    description: 'A role-based learning platform for administrators, instructors, and learners with enrollment and progress tracking.',
     bullets: [
-      'Implemented user registration, course enrollment, and progress tracking.',
-      'Integrated Stripe payments and Redux Toolkit for state and API management.',
-      'Created a responsive interface with Tailwind CSS, dark mode, and Cloudinary-backed media delivery.',
+      'Integrated Stripe payments, Redux Toolkit state management, and Cloudinary media delivery.',
+      'Created a responsive React interface with Tailwind CSS and dark mode.',
     ],
-    links: [
-      {
-        label: 'Repo: github.com/Ayushgaur1557/Up-Grow-Learner',
-        href: 'https://github.com/Ayushgaur1557/Up-Grow-Learner',
-      },
-    ],
+    links: [{ label: 'View GitHub repository', href: 'https://github.com/Ayushgaur1557/Up-Grow-Learner' }],
   },
   {
     title: 'AI-Powered Document Assistant',
-    subtitle: 'Document summarization and AI utility app',
-    description:
-      'Developed a web application that summarizes PDFs and images while also supporting AI image generation workflows.',
+    subtitle: 'AI document processing platform',
+    description: 'A web application for understanding PDFs and images through OCR and AI-assisted processing.',
     bullets: [
       'Integrated Hugging Face APIs for summarization, translation, and sentiment analysis.',
-      'Added OCR support to extract text from image documents before processing.',
-      'Designed a clean user flow for AI-assisted document understanding.',
+      'Added OCR extraction and AI image-generation workflows in a focused, accessible interface.',
     ],
-    links: [
-      {
-        label: 'Repo: github.com/Ayushgaur1557/Ai-Powered-document-Assistant',
-        href: 'https://github.com/Ayushgaur1557/Ai-Powered-document-Assistant',
-      },
-    ],
+    links: [{ label: 'View GitHub repository', href: 'https://github.com/Ayushgaur1557/Ai-Powered-document-Assistant' }],
   },
 ]
 
-const skills = [
-  'React Native',
-  'React.js',
-  'JavaScript',
-  'C++',
-  'Firebase',
-  'Push Notifications',
-  'Android',
-  'iOS',
-  'API Integration',
-  'Git & GitHub',
-  'Tailwind CSS',
-  'Postman',
-  'Android Studio',
-  'VS Code',
-  'App Store Release Workflow',
-  'Play Store Release Workflow',
+const skillGroups = [
+  { title: 'Frontend', items: ['React.js', 'React Native', 'TypeScript', 'JavaScript', 'Redux Toolkit', 'Tailwind CSS', 'Responsive UI', 'React Navigation'] },
+  { title: 'Backend & Data', items: ['Node.js', 'Express.js', 'REST APIs', 'Socket.IO', 'SQL', 'MongoDB', 'Axios', 'Token Authentication'] },
+  { title: 'Platform & Native', items: ['Kotlin', 'Java', 'Android', 'iOS', 'Firebase', 'FCM', 'IPP Printing', 'Zeroconf / mDNS'] },
+  { title: 'Tools & Delivery', items: ['Git & GitHub', 'Postman', 'Android Studio', 'VS Code', 'Play Console', 'App Store Connect', 'Razorpay', 'Stripe'] },
 ]
 
-const education = {
-  degree: 'Bachelor of Technology in Computer Science',
-  school: 'Dev Bhoomi Uttarakhand University',
-  score: 'CGPA: 8.0',
-  period: '2022 - 2026',
-}
-
 const achievements = [
-  'Top 5 position in Lakshagrah 4.0 (2024), an international-level hackathon.',
-  'Solved 300+ problems across LeetCode and GeeksforGeeks.',
-  'Hands-on experience shipping live apps for both Android and iOS stores.',
+  '3-star competitive programmer with a rating above 1691.',
+  'Top 5 at Lakshagrah 4.0 (2024), an international-level hackathon.',
+  'Solved 300+ data structures and algorithms problems across LeetCode and GeeksforGeeks.',
+  'Hands-on ownership of five live products and production releases across Android and iOS.',
 ]
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 24)
-    }
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 24)
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
-
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   useEffect(() => {
-    const elements = document.querySelectorAll('.reveal')
-
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      {
-        threshold: 0.01,
-        rootMargin: '0px 0px 18% 0px',
-      },
+      (entries) => entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        }
+      }),
+      { threshold: 0.04, rootMargin: '0px 0px 12% 0px' },
     )
-
-    elements.forEach((element) => observer.observe(element))
-
+    document.querySelectorAll('.reveal').forEach((element) => observer.observe(element))
     return () => observer.disconnect()
   }, [])
+
+  const closeMenu = () => setMenuOpen(false)
 
   return (
     <div className="page-shell">
       <header className={`topbar ${isScrolled ? 'topbar-scrolled' : ''}`}>
-        <a className="brand" href="#home">
+        <a className="brand" href="#home" onClick={closeMenu} aria-label="Ayush Gaur home">
           <span className="brand-mark">AG</span>
           <span>Ayush Gaur</span>
         </a>
-
-        <nav className="nav">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
-          <a href="#contact">Contact</a>
+        <button className="menu-button" type="button" aria-expanded={menuOpen} aria-controls="site-nav" onClick={() => setMenuOpen((open) => !open)}>
+          <span className="sr-only">Toggle navigation</span>
+          <span /><span /><span />
+        </button>
+        <nav className={`nav ${menuOpen ? 'nav-open' : ''}`} id="site-nav">
+          <a href="#about" onClick={closeMenu}>About</a>
+          <a href="#experience" onClick={closeMenu}>Experience</a>
+          <a href="#work" onClick={closeMenu}>Live work</a>
+          <a href="#projects" onClick={closeMenu}>Projects</a>
+          <a href="#skills" onClick={closeMenu}>Skills</a>
+          <a className="nav-cta" href="#contact" onClick={closeMenu}>Contact</a>
         </nav>
       </header>
 
       <main>
-        <section className="hero-section reveal" id="home">
-          <div className="hero-copy">
-            <p className="eyebrow">React Native Developer</p>
-            <h1>
-              Building clean, production-ready mobile experiences for Android
-              and iOS.
-            </h1>
-            <p className="hero-text">
-              I am Ayush Gaur, a developer focused on cross-platform apps,
-              scalable UI, API integration, Firebase workflows, and live store
-              releases. I enjoy shipping practical products that feel polished,
-              reliable, and user-first.
-            </p>
-
+        <section className="hero-section" id="home">
+          <div className="hero-copy reveal">
+            <p className="eyebrow"><span className="status-dot" /> Frontend Developer · Software Engineer</p>
+            <h1>I build software that works in the real world.</h1>
+            <p className="hero-text">Frontend-focused software developer building production platforms across web, mobile, backend services, native Android, real-time systems, payments, and app-store delivery.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#projects">
-                Explore My Work
-              </a>
-              <a className="button button-secondary" href="#contact">
-                Contact Me
-              </a>
+              <a className="button button-primary" href="#work">View production work <span aria-hidden="true">↗</span></a>
+              <a className="button button-secondary" href="#contact">Let&apos;s talk</a>
             </div>
-
-            <div className="social-row">
-              {socialLinks.map((link) => (
-                <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
-                  {link.label}
-                </a>
-              ))}
-            </div>
+            <div className="social-row">{socialLinks.map((link) => <a key={link.label} href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}</div>
           </div>
-
-          <aside className="hero-panel">
-            <div className="hero-card">
-              <p className="hero-card-label">Now Working On</p>
-              <h2>Production mobile apps at Srchout Software Pvt. Ltd.</h2>
-              <p>
-                Delivering features, improving UI/UX, managing APIs, and
-                supporting releases for live Play Store and App Store products.
-              </p>
+          <aside className="hero-panel reveal">
+            <div className="code-card">
+              <div className="window-bar"><span /><span /><span /><small>developer.profile</small></div>
+              <pre><code><span className="code-muted">const</span> ayush = {'{'}{`\n`}  role: <span className="code-accent">&quot;Frontend Developer&quot;</span>,{`\n`}  focus: [<span className="code-accent">&quot;product&quot;</span>, <span className="code-accent">&quot;scale&quot;</span>],{`\n`}  ships: <span className="code-number">5</span> liveProducts,{`\n`}  stack: <span className="code-accent">&quot;full software lifecycle&quot;</span>{`\n`}{'}'}</code></pre>
             </div>
-
-            <div className="metric-grid">
-              {metrics.map((metric) => (
-                <article key={metric.label} className="metric-card">
-                  <strong>{metric.value}</strong>
-                  <span>{metric.label}</span>
-                </article>
-              ))}
-            </div>
+            <div className="metric-grid">{metrics.map((metric) => <article key={metric.label} className="metric-card"><strong>{metric.value}</strong><span>{metric.label}</span></article>)}</div>
           </aside>
         </section>
 
-        <section className="section reveal" id="about">
-          <div className="section-heading">
-            <p className="eyebrow">Profile</p>
-            <h2>About Me</h2>
-          </div>
-          <div className="content-card reveal">
-            <p>
-              Experienced in building production-level Android and iOS apps with
-              strong expertise in JavaScript, frontend development, API
-              integration, and user-friendly mobile interfaces. I work
-              comfortably across development, debugging, deployment, and release
-              coordination.
-            </p>
-            <p>
-              My current focus is React Native development backed by Firebase,
-              push notifications, clean Git-based collaboration, and live app
-              delivery for real users.
-            </p>
+        <section className="section about-grid" id="about">
+          <div className="section-heading reveal"><p className="section-number">01 / ABOUT</p><h2>More than<br />one platform.</h2></div>
+          <div className="about-copy reveal">
+            <p className="lead">I turn product requirements into reliable software—from the interface people see to the services and native integrations underneath.</p>
+            <p>My experience spans responsive frontend engineering, React Native applications, Node.js/Express APIs, Kotlin and Java modules, Firebase, Socket.IO, SQL and MongoDB. I have worked on live learning, fintech, property, printing, and food-ordering products.</p>
+            <p>I care about maintainable architecture, clear user experiences, dependable integrations, and owning delivery through testing, release, and production support.</p>
           </div>
         </section>
 
-        <section className="section reveal" id="experience">
-          <div className="section-heading section-heading-split">
-            <p className="eyebrow eyebrow-opposite">Career</p>
-            <h2>Experience</h2>
-          </div>
-
-          <div className="timeline">
-            {experiences.map((experience) => (
-              <article key={experience.role} className="timeline-card reveal">
-                <div className="timeline-header">
-                  <div>
-                    <h3>{experience.role}</h3>
-                    <p className="meta">{experience.company}</p>
-                  </div>
-                  <span className="period">{experience.period}</span>
-                </div>
-
-                <ul>
-                  {experience.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
+        <section className="section" id="experience">
+          <div className="section-heading horizontal reveal"><div><p className="section-number">02 / EXPERIENCE</p><h2>Production-minded engineering.</h2></div><p className="section-note">Building, shipping, and supporting software used by real customers.</p></div>
+          <div className="timeline">{experiences.map((experience) => <article key={experience.role} className="timeline-card reveal"><div className="timeline-marker" /><div className="timeline-header"><div><h3>{experience.role}</h3><p className="meta">{experience.company}</p></div><span className="period">{experience.period}</span></div><ul>{experience.points.map((point) => <li key={point}>{point}</li>)}</ul></article>)}</div>
         </section>
 
-        <section className="section reveal" id="work">
-          <div className="section-heading section-heading-split">
-            <p className="eyebrow eyebrow-opposite">Live Work</p>
-            <h2>Products In Production</h2>
-          </div>
-
-          <div className="card-grid">
-            {liveProducts.map((product) => (
-              <article key={product.title} className="feature-card reveal">
-                <h3>{product.title}</h3>
-                <p>{product.description}</p>
-                <a href={product.href} target="_blank" rel="noreferrer">
-                  {product.linkLabel}
-                </a>
-              </article>
-            ))}
-          </div>
+        <section className="section" id="work">
+          <div className="section-heading horizontal reveal"><div><p className="section-number">03 / LIVE WORK</p><h2>Products in production.</h2></div><p className="section-note">Five shipped applications across multiple business domains.</p></div>
+          <div className="product-grid">{liveProducts.map((product, index) => <article key={product.title} className={`product-card reveal ${index < 2 ? 'product-featured' : ''}`}><div className="product-index">0{index + 1}</div><p className="product-type">{product.type}</p><h3>{product.title}</h3><p>{product.description}</p><div className="tag-row">{product.highlights.map((item) => <span key={item}>{item}</span>)}</div><a href={product.href} target="_blank" rel="noreferrer" aria-label={`View ${product.title} listing`}>View product <span aria-hidden="true">↗</span></a></article>)}</div>
         </section>
 
-        <section className="section reveal" id="projects">
-          <div className="section-heading section-heading-split">
-            <p className="eyebrow eyebrow-opposite">Portfolio</p>
-            <h2>Selected Projects</h2>
-          </div>
-
-          <div className="project-list">
-            {projects.map((project) => (
-              <article key={project.title} className="project-card reveal">
-                <div className="project-topline">
-                  <div>
-                    <h3>{project.title}</h3>
-                    <p className="meta">{project.subtitle}</p>
-                  </div>
-                </div>
-
-                <p>{project.description}</p>
-
-                <ul>
-                  {project.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-
-                <div className="link-row">
-                  {project.links.map((link) => (
-                    <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
+        <section className="section" id="projects">
+          <div className="section-heading horizontal reveal"><div><p className="section-number">04 / CASE STUDIES</p><h2>Selected technical work.</h2></div><p className="section-note">A closer look at systems, architecture, and delivery.</p></div>
+          <div className="project-list">{projects.map((project, index) => <article key={project.title} className="project-card reveal"><div className="project-number">{String(index + 1).padStart(2, '0')}</div><div className="project-body"><p className="meta">{project.subtitle}</p><h3>{project.title}</h3><p className="project-description">{project.description}</p><ul>{project.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul><div className="link-row">{project.links.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}</div></div></article>)}</div>
         </section>
 
-        <section className="section reveal" id="skills">
-          <div className="section-heading">
-            <p className="eyebrow">Capabilities</p>
-            <h2>Skills & Tools</h2>
-          </div>
-
-          <div className="skills-cloud">
-            {skills.map((skill) => (
-              <span key={skill} className="skill-pill">
-                {skill}
-              </span>
-            ))}
-          </div>
+        <section className="section" id="skills">
+          <div className="section-heading horizontal reveal"><div><p className="section-number">05 / CAPABILITIES</p><h2>Skills & tools.</h2></div><p className="section-note">A practical stack shaped by production requirements.</p></div>
+          <div className="skills-grid">{skillGroups.map((group) => <article className="skill-group reveal" key={group.title}><h3>{group.title}</h3><div className="skills-cloud">{group.items.map((skill) => <span key={skill}>{skill}</span>)}</div></article>)}</div>
         </section>
 
-        <section className="section split-section reveal" id="education">
-          <article className="content-card reveal">
-            <p className="eyebrow">Education</p>
-            <h2>{education.degree}</h2>
-            <p className="meta">{education.school}</p>
-            <p>
-              {education.score} | {education.period}
-            </p>
-            <p>{education.extra}</p>
-          </article>
-
-          <article className="content-card reveal">
-            <p className="eyebrow">Recognition</p>
-            <h2>Achievements & Certificate</h2>
-            <ul className="achievement-list">
-              {achievements.map((achievement) => (
-                <li key={achievement}>{achievement}</li>
-              ))}
-            </ul>
-            <a
-              className="inline-link"
-              href="https://drive.google.com/file/d/1faqtbpxVPo3iDz5n0mDfWeG1HeWiRmjL/view?usp=drive_link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View Certificate
-            </a>
-          </article>
+        <section className="section split-section" id="education">
+          <article className="info-card reveal"><p className="section-number">06 / EDUCATION</p><h2>B.Tech in Computer Science</h2><p className="lead-small">Dev Bhoomi Uttarakhand University</p><div className="info-footer"><span>2022 — 2026</span><strong>CGPA 8.0</strong></div></article>
+          <article className="info-card reveal"><p className="section-number">07 / ACHIEVEMENTS</p><h2>Recognition</h2><ul className="achievement-list">{achievements.map((achievement) => <li key={achievement}>{achievement}</li>)}</ul></article>
         </section>
 
         <section className="section contact-section reveal" id="contact">
-          <div className="section-heading">
-            <p className="eyebrow">Contact</p>
-            <h2>Let&apos;s Build Something Useful</h2>
-          </div>
-
-          <div className="contact-card reveal">
-            <p>
-              I&apos;m open to React Native, frontend, and cross-platform mobile
-              opportunities where strong UI, clean engineering, and dependable
-              delivery matter.
-            </p>
-
-            <div className="contact-links">
-              <a className="contact-pill glow-link" href="mailto:ayushgaur061@gmail.com">
-                Gmail
-                <span>ayushgaur061@gmail.com</span>
-              </a>
-              <a
-                className="contact-pill glow-link"
-                href="https://wa.me/919027659922"
-                target="_blank"
-                rel="noreferrer"
-              >
-                WhatsApp
-                <span>+91 9027659922</span>
-              </a>
-              <a
-                className="contact-pill glow-link"
-                href="https://github.com/Ayushgaur1557"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-                <span>github.com/Ayushgaur1557</span>
-              </a>
-              <a
-                className="contact-pill glow-link"
-                href="https://www.linkedin.com/in/ayush-gaur-9494942bb/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-                <span>linkedin.com/in/ayush-gaur-9494942bb</span>
-              </a>
-            </div>
-          </div>
+          <p className="section-number">08 / CONTACT</p><div className="contact-heading"><h2>Have a product to build?</h2><p>I&apos;m open to frontend and software development opportunities where thoughtful engineering and dependable delivery matter.</p></div>
+          <a className="email-link" href="mailto:ayushgaur061@gmail.com">ayushgaur061@gmail.com <span aria-hidden="true">↗</span></a>
+          <div className="contact-footer"><span>Dehradun, Uttarakhand, India</span><div>{socialLinks.map((link) => <a key={link.label} href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">{link.label}</a>)}<a href="https://wa.me/919027659922" target="_blank" rel="noreferrer">WhatsApp</a></div></div>
         </section>
       </main>
     </div>
