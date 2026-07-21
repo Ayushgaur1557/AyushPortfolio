@@ -64,15 +64,15 @@ const experiences = [
       'Collaborate on debugging, performance, UX quality, and reliable delivery for real users.',
     ],
   },
-  {
-    role: 'Frontend Engineering Intern',
-    company: 'Srchout Software Pvt. Ltd.',
-    period: 'Mar 2025 — Jun 2025',
-    points: [
-      'Built reusable interfaces and API-connected product flows while learning production engineering practices.',
-      'Contributed to debugging, testing, usability improvements, and Android/iOS release readiness.',
-    ],
-  },
+  // {
+  //   role: 'Frontend Engineering Intern',
+  //   company: 'Srchout Software Pvt. Ltd.',
+  //   period: 'Mar 2025 — Jun 2025',
+  //   points: [
+  //     'Built reusable interfaces and API-connected product flows while learning production engineering practices.',
+  //     'Contributed to debugging, testing, usability improvements, and Android/iOS release readiness.',
+  //   ],
+  // },
 ]
 
 const projects = [
